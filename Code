@@ -1,0 +1,22 @@
+#!/usr/bin/env python 
+# coding: utf-8  
+# In[16]:   
+import numpy as np  
+import pandas as pd #for Importing Data 
+import matplotlib.pyplot as plt #for plotting 
+import seaborn as sns #for plotting 
+from ttictoc import tic,toc 
+from random import randrange 
+import random 
+from math import sqrt 
+from math import e  
+dt = pd.read_csv('heart.csv') #Edit accordingly 
+dt.columns  =  ['Age',  'Sex',  'Chest_pain_type',  'Resting_blood_pressure',  'Cholesterol', 
+'Fasting_blood_sugar', 'Rest_ecg', 'Max_heart_rate_achieved',        'Exercise_induced_angina',  'St_depression',  'St_slope',  'Num_major_vessels',  'Thalassemia', 
+'Target'] 
+dt.head()#For cheking   
+# In[3]:   
+dt.dtypes #As we can see some attributes must be of categorical value. However they are represented 
+as integers. 
+#We will create dummy variables for categorical variables later.    
+# In[3]:
